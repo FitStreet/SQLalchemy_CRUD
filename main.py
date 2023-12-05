@@ -22,10 +22,7 @@ Base.metadata.create_all(bind=engine)
 
 ItemPydentic = sqlalchemy_to_pydantic(Item, exclude=['id']) # валидация данных перед отправкой в бд
 
-#API - посмотреть что это.
-
 db_item = ItemPydentic(name = 'Iphone 15', description = 'Iphone 15 1 TB blue', price = 5000)
-db_update_item = ItemPydentic(name = 'Nokia', description = '3310', price = 545)
 def create_item(db_item: ItemPydentic):
     """
     добавляет новый элемент в таблицу
@@ -104,7 +101,7 @@ def delete_item(item_id: int):
 #print(update_item(1, "Nokia", "3310", 500 ))
 # print(retrieve_item())
 # create_item(db_item)
-
+# print(delete_item(1))
 
 
 
