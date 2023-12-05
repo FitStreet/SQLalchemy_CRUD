@@ -3,8 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from pydantic_sqlalchemy import sqlalchemy_to_pydantic
 
-DATABASE_URL = "postgresql://fitstreet:Stdvan1x@localhost/product_items"
-# "postgresql://username:password@host/db_name"
+DATABASE_URL = "postgresql://username:password@host/db_name" # Заполните согласно вашим данным
 
 engine = create_engine(DATABASE_URL) # соединение с бд
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine) # способ обращения к бд
